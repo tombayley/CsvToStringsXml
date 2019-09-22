@@ -10,8 +10,7 @@ public class MyConverter {
 
     public MyConverter() {
         CsvToStringsXml.DocType docType = new CsvToStringsXml.DocTypeBuilder()
-                .addItem("appname", "Bottom Quick Settings", 14)
-                .addItem("miui_appname", "MIUI-ify", 2)
+                .addItem("appname", "My Cool App")
                 .build();
 
         CsvToStringsXml.CsvToAndroidStringsXmlBuilder builder

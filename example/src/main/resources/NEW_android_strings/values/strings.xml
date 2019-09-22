@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources [
+    <!ENTITY appname "My Cool App">
+]>
+<resources>
+    <string name="hello_text">Hello</string>
+    <string name="bye_text">Bye</string>
+    <string name="app_name" translatable="false">&appname;</string>
+    <string name="yes">Yes</string>
+</resources>

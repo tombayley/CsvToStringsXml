@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources [
+    <!ENTITY appname "My Cool App">
+]>
+<resources>
+    <string name="hello_text">Привет</string>
+    <string name="bye_text">до свидания</string>
+    <string name="yes">Да</string>
+</resources>
