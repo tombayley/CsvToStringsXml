@@ -2,6 +2,8 @@
 *.iml
 /.idea/
 /.settings/
+.classpath
+.project
 
 bin/
 .gradle/
@@ -12,7 +14,7 @@ build/
 *.class
 
 # Resources
-**/resources/**/*.xml
-**/resources/**/*.tsv
-**/resources/**/*.csv
-**/resources/**/*.txt
+# **/resources/**/*.xml
+# **/resources/**/*.tsv
+# **/resources/**/*.csv
+# **/resources/**/*.txt
