@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'com.tombayley.csvtostringsxmlexample'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':csvtostringsxml')
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
