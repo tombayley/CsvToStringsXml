@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.tombayley.CsvToStringsXml:csvtostringsxml:0.1.0'
+    implementation 'com.github.tombayley.CsvToStringsXml:csvtostringsxml:1.0.0'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

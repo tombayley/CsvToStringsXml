@@ -27,13 +27,13 @@ allprojects {
 2. Add the dependency:
 ```
 dependencies {
-        implementation 'com.github.tombayley.CsvToStringsXml:csvtostringsxml:0.1.0'
+    implementation 'com.github.tombayley.CsvToStringsXml:csvtostringsxml:1.0.0'
 }
 ```
 
 ##### Using JAR file (/example_jar/)
 1. To run you program with the jar file:
-`java -cp ".;csvtostringsxml-0.1.0.jar" example_jar/MyConverter.java`
+`java -cp ".;csvtostringsxml-1.0.0.jar" example_jar/MyConverter.java`
 
 
 
