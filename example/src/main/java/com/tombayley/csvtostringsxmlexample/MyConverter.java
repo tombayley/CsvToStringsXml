@@ -15,7 +15,7 @@ public class MyConverter {
 
         CsvToStringsXml.CsvToStringsXmlBuilder builder
                 = new CsvToStringsXml.CsvToStringsXmlBuilder()
-                .setResourcesDirPath("example/src/main/resources/android_strings")
+                .setExistingResourcesDirPath("example/src/main/resources/android_strings")
                 .setSpreadsheetPath("example/src/main/resources/translations.tsv")
                 .setOutputPath("example/src/main/resources/NEW_android_strings")
                 .setSpreadsheetDelimiter('\t')
