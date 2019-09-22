@@ -46,8 +46,8 @@ import com.tombayley.csvtostringsxml.CsvToStringsXml;
 
 //...
 
-CsvToStringsXml.CsvToAndroidStringsXmlBuilder builder
-        = new CsvToStringsXml.CsvToAndroidStringsXmlBuilder()
+CsvToStringsXml.CsvToStringsXmlBuilder builder
+        = new CsvToStringsXml.CsvToStringsXmlBuilder()
         .setOutputPath("resources_dir/NEW_android_strings")
         .setSpreadsheetPath("resources_dir/translations.tsv")
         .setSpreadsheetDelimiter('\t')
@@ -58,7 +58,7 @@ CsvToStringsXml csvToStringsXml = new CsvToStringsXml(builder);
 csvToStringsXml.start();
 ```
 
-2. You can customise the CsvToAndroidStringsXmlBuilder as you like:
+2. You can customise the CsvToStringsXmlBuilder as you like:
 
 | Config | Explanation |
 | --- | --- |
@@ -84,8 +84,8 @@ CsvToStringsXml.DocType docType = new CsvToStringsXml.DocTypeBuilder()
         .addItem("appname", "My Cool App", 10)
         .build();
 
-CsvToStringsXml.CsvToAndroidStringsXmlBuilder builder
-        = new CsvToStringsXml.CsvToAndroidStringsXmlBuilder()
+CsvToStringsXml.CsvToStringsXmlBuilder builder
+        = new CsvToStringsXml.CsvToStringsXmlBuilder()
         //...
         .setDocType(docType);
 ```
@@ -104,8 +104,8 @@ This is useful if there are translations for strings in your existing string xml
 Note: Only existing strings are combined. Existing locales which aren't present in the translations csv will not be combined (yet)
 
 ```java
-CsvToStringsXml.CsvToAndroidStringsXmlBuilder builder
-        = new CsvToStringsXml.CsvToAndroidStringsXmlBuilder()
+CsvToStringsXml.CsvToStringsXmlBuilder builder
+        = new CsvToStringsXml.CsvToStringsXmlBuilder()
         //...
         .setExistingResourcesDirPath("example/src/main/resources/android_strings");
 ```
@@ -130,7 +130,7 @@ An example output of this combination is shown in [example/src/main/resources/NE
 
 2. Download the sheet as a .tsv tab separated value file (can also use csv but may cause conflicts with some languages)
 3. Place the file in a resources directory (along with existing string xmls if needed, see "Including existing string xml files")
-4. Configure the CsvToAndroidStringsXmlBuilder and run the program.
+4. Configure the CsvToStringsXmlBuilder and run the program.
 5. Replace the String XML's in your Android project with the newly generated XML files.
 6. Using diff tool (e.g. git diff), make sure changes are as expected
 
@@ -139,7 +139,6 @@ An example output of this combination is shown in [example/src/main/resources/NE
 
 
 ## Features to add:
-- Example resources with translations, existing strings, output
 - Unit testing
 - Web interface
-- User interface for local use
+- User interface with JAR

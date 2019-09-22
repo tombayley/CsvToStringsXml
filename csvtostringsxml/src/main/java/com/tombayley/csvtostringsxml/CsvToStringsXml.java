@@ -72,7 +72,7 @@ public class CsvToStringsXml {
 
     protected boolean isBuilderValid = false;
 
-    public CsvToStringsXml(CsvToAndroidStringsXmlBuilder builder) {
+    public CsvToStringsXml(CsvToStringsXmlBuilder builder) {
         existingResourcesDirPath = builder.existingResourcesDirPath;
 
         if (builder.spreadsheetPath == null) {
@@ -562,7 +562,7 @@ public class CsvToStringsXml {
         }
     }
 
-    public static class CsvToAndroidStringsXmlBuilder {
+    public static class CsvToStringsXmlBuilder {
         String existingResourcesDirPath = null;
         String spreadsheetPath = null;
         String outputPath = null;
@@ -572,42 +572,42 @@ public class CsvToStringsXml {
         String encoding = "UTF-8";
         String stringIdColumnTitle = "";
 
-        public CsvToAndroidStringsXmlBuilder setExistingResourcesDirPath(String path) {
+        public CsvToStringsXmlBuilder setExistingResourcesDirPath(String path) {
             existingResourcesDirPath = path;
             return this;
         }
 
-        public CsvToAndroidStringsXmlBuilder setSpreadsheetPath(String path) {
+        public CsvToStringsXmlBuilder setSpreadsheetPath(String path) {
             spreadsheetPath = path;
             return this;
         }
 
-        public CsvToAndroidStringsXmlBuilder setOutputPath(String path) {
+        public CsvToStringsXmlBuilder setOutputPath(String path) {
             outputPath = path;
             return this;
         }
 
-        public CsvToAndroidStringsXmlBuilder setSpreadsheetDelimiter(char delimiter) {
+        public CsvToStringsXmlBuilder setSpreadsheetDelimiter(char delimiter) {
             spreadsheetDelimiter = delimiter;
             return this;
         }
 
-        public CsvToAndroidStringsXmlBuilder setDefaultLocaleCode(String code) {
+        public CsvToStringsXmlBuilder setDefaultLocaleCode(String code) {
             defaultLocaleCode = code;
             return this;
         }
 
-        public CsvToAndroidStringsXmlBuilder setDocType(DocType docType) {
+        public CsvToStringsXmlBuilder setDocType(DocType docType) {
             this.docType = docType;
             return this;
         }
 
-        public CsvToAndroidStringsXmlBuilder setEncoding(String encoding) {
+        public CsvToStringsXmlBuilder setEncoding(String encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public CsvToAndroidStringsXmlBuilder setStringIdColumnTitle(String title) {
+        public CsvToStringsXmlBuilder setStringIdColumnTitle(String title) {
             stringIdColumnTitle = title;
             return this;
         }

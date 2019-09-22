@@ -13,8 +13,8 @@ public class MyConverter {
                 .addItem("appname", "My Cool App")
                 .build();
 
-        CsvToStringsXml.CsvToAndroidStringsXmlBuilder builder
-                = new CsvToStringsXml.CsvToAndroidStringsXmlBuilder()
+        CsvToStringsXml.CsvToStringsXmlBuilder builder
+                = new CsvToStringsXml.CsvToStringsXmlBuilder()
                 .setResourcesDirPath("example/src/main/resources/android_strings")
                 .setSpreadsheetPath("example/src/main/resources/translations.tsv")
                 .setOutputPath("example/src/main/resources/NEW_android_strings")
