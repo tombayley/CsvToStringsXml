@@ -43,7 +43,7 @@ public class CsvToStringsXml {
     // ==========================================
     // Config
     // ==========================================
-    protected String resourcesDirPath;
+    protected String existingResourcesDirPath;
     protected String spreadsheetPath;
     protected String outputPath;
     protected char spreadsheetDelimiter;
@@ -73,7 +73,7 @@ public class CsvToStringsXml {
     protected boolean isBuilderValid = false;
 
     public CsvToStringsXml(CsvToAndroidStringsXmlBuilder builder) {
-        resourcesDirPath = builder.resourcesDirPath;
+        existingResourcesDirPath = builder.existingResourcesDirPath;
 
         if (builder.spreadsheetPath == null) {
             print("spreadsheetPath not set");
@@ -120,10 +120,10 @@ public class CsvToStringsXml {
         HashMap<String, LinkedHashMap<String, String>> newTranslations = convertCsvListToHashMap(newTranslationsCsv);
         removeEmptyTranslations(newTranslations);
 
-        if (resourcesDirPath != null) {
+        if (existingResourcesDirPath != null) {
             HashMap<String, Document> stringDocumentXmls;
             try {
-                stringDocumentXmls = readResStringFiles(new File(resourcesDirPath));
+                stringDocumentXmls = readResStringFiles(new File(existingResourcesDirPath));
             } catch (IOException | ParserConfigurationException | SAXException e) {
                 e.printStackTrace();
                 return;
@@ -563,7 +563,7 @@ public class CsvToStringsXml {
     }
 
     public static class CsvToAndroidStringsXmlBuilder {
-        String resourcesDirPath = null;
+        String existingResourcesDirPath = null;
         String spreadsheetPath = null;
         String outputPath = null;
         char spreadsheetDelimiter = ',';
@@ -572,8 +572,8 @@ public class CsvToStringsXml {
         String encoding = "UTF-8";
         String stringIdColumnTitle = "";
 
-        public CsvToAndroidStringsXmlBuilder setResourcesDirPath(String path) {
-            resourcesDirPath = path;
+        public CsvToAndroidStringsXmlBuilder setExistingResourcesDirPath(String path) {
+            existingResourcesDirPath = path;
             return this;
         }
 
