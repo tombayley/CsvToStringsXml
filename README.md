@@ -34,9 +34,30 @@ csvToStringsXml.start();
 | ... | ... | ... | ... | ... | ... |
 
 2. Download the Google Sheet as a .tsv tab separated value file (can also use csv but may cause conflicts with some languages)
+
+#### Using dependency
+3. Add it in your root build.gradle at the end of repositories:
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+4. Add the dependency:
+```
+dependencies {
+        implementation 'com.github.tombayley.CsvToStringsXml:csvtostringsxml:0.1.0'
+}
+```
+5. 
+
+#### Using Jar
 3. 
 
 
 ## Features to add:
+- Unit testing
 - Web interface
-- User interface
+- User interface for local use
