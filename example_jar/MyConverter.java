@@ -4,13 +4,12 @@ public class MyConverter {
 
     public static void main(String args[]) {
         CsvToStringsXml.DocType docType = new CsvToStringsXml.DocTypeBuilder()
-                .addItem("appname", "Bottom Quick Settings", 14)
-                .addItem("miui_appname", "MIUI-ify", 2)
+                .addItem("appname", "My Cool App")
                 .build();
 
         CsvToStringsXml.CsvToStringsXmlBuilder builder
                 = new CsvToStringsXml.CsvToStringsXmlBuilder()
-                .setResourcesDirPath("example/src/main/resources/android_strings")
+                .setExistingResourcesDirPath("example/src/main/resources/android_strings")
                 .setSpreadsheetPath("example/src/main/resources/translations.tsv")
                 .setOutputPath("example/src/main/resources/NEW_android_strings")
                 .setSpreadsheetDelimiter('\t')
