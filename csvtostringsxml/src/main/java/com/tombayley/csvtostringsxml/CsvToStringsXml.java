@@ -304,6 +304,8 @@ public class CsvToStringsXml {
         out.write(("<?xml version=\"1.0\" encoding=\"" + encoding + "\"?>\n").getBytes(encoding));
         out.write(docType.docTypeText.getBytes(encoding));
         transformer.transform(source, result);
+
+        out.close();
     }
 
     protected void addExistingStringXmlTranslationsToNewTranslations(
@@ -502,6 +504,9 @@ public class CsvToStringsXml {
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
         Document doc = dBuilder.parse(is);
         doc.getDocumentElement().normalize();
+
+        inputStream.close();
+        reader.close();
 
         return doc;
     }
