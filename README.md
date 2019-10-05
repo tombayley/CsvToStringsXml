@@ -1,6 +1,8 @@
 # CsvToStringsXml
 
 [![](https://jitpack.io/v/tombayley/CsvToStringsXml.svg)](https://jitpack.io/#tombayley/CsvToStringsXml)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/tombayley/CsvToStringsXml.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tombayley/CsvToStringsXml/alerts/)
+[![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/tombayley/CsvToStringsXml.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tombayley/CsvToStringsXml/context:java)
 
 A script to convert Android translations stored in Google Sheets to Android string xml files.
 Useful if you don't want to pay some of the high prices websites offering collaborative translations provide.
@@ -92,7 +94,7 @@ CsvToStringsXml.CsvToStringsXmlBuilder builder
 
 `addItem()` takes the DocType key and value as mandatory arguments.
 You can also pass in a integer as a 3rd parameter to specify the expected number of occurrences of each DocType key.
-If the actual occurrences doesn't match the expected in any locale, the DocType key and locale code are printed with the actual and expected occurrences. 
+If the actual occurrences doesn't match the expected in any locale, the DocType key and locale code are printed with the actual and expected occurrences.
 
 
 
